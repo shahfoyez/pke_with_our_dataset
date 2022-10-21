@@ -419,7 +419,7 @@ class YAKE(LoadFile):
                 threshold (float): the threshold used when computing the
                     levenshtein distance, defaults to 0.8.
         """
-
+        # print("Top 10 from yake*****************************************")
         # sort candidates by ascending weight
         best = sorted(self.weights, key=self.weights.get, reverse=False)
 
@@ -460,6 +460,6 @@ class YAKE(LoadFile):
 
                 candidate = ' '.join(self.candidates[candidate].lexical_form)
                 n_best[i] = (candidate, weight)
-
+                # print (n_best[i])
         # return the list of best candidates
         return n_best
